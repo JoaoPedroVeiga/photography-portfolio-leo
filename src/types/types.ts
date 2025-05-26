@@ -1,3 +1,4 @@
+
 export interface Category {
   id: string;
   name: string;
@@ -10,5 +11,8 @@ export interface Photo {
   id: string;
   title: string;
   imageUrl: string;
-  category: string;
+  category: string; // Isso refere-se ao ID da categoria
+  width: number;
+  height: number;
+  description?: string;
 }

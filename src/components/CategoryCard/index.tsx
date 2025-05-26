@@ -1,34 +1,24 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+// src/components/CategoryCard/index.tsx
+export { CategoryCardClient as default } from './CategoryCardClient';
 import { Category } from '@/types/types';
-
 
 interface CategoryCardProps {
   category: Category;
+  featured?: boolean;
+  children?: React.ReactNode;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
+export const CategoryCard = ({ category, featured = false, children }: CategoryCardProps) => {
   return (
-    <Link href={`/categories/${category.id}`} passHref>
-      <div className="group cursor-pointer">
-        <div className="overflow-hidden rounded-lg">
-          <Image
-            src={category.imageUrl}
-            alt={category.name}
-            width={500}
-            height={500}
-            className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105"
-          />
-        </div>
-        <div className="mt-4">
-          <h3 className="text-white font-semibold text-lg">{category.name}</h3>
-          <p className="text-gray-400 text-sm mt-1">{category.description}</p>
-        </div>
+    <div className={`relative group rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 ${featured ? 'ring-2 ring-amber-400' : ''}`}>
+      <div className="overflow-hidden relative aspect-square md:h-32 md:aspect-auto sm:h-40 md:h-48 lg:h-56 xl:h-64">
+        {featured && (
+          <div className="absolute top-2 right-2 bg-amber-400 text-black px-2 py-0.5 rounded-full text-xs font-bold z-30">
+            Destaque
+          </div>
+        )}
+        {children}
       </div>
-    </Link>
+    </div>
   );
 };
-
-export default CategoryCard;
-

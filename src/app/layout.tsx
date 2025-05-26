@@ -1,4 +1,3 @@
-
 import Header from "@/components/header";
 import "./globals.css";
 import Footer from "@/components/footer";
@@ -21,3 +20,4 @@ export default function RootLayout({
     </html>
   );
 }
+

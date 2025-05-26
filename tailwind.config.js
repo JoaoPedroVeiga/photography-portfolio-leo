@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       fontFamily: {
         arvo: ['Arvo', 'sans-serif'],
+         boska: ['Boska', 'sans-serif'],
+        tanker: ['Tanker', 'sans-serif'],
+        telma: ['Telma', 'sans-serif'],
       },
     },
   },
