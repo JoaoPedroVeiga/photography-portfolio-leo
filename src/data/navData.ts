@@ -4,6 +4,3 @@ export const photoCategories = [
   { name: "Cogumelos", href: "/categories/cogumelo" },
 ];
 
-export const videoCategories = [
-  { name: "Vídeos", href: "/videos" },
-];
