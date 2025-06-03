@@ -29,6 +29,8 @@ export const categories: Category[] = [
       { id: 'natureza-5', title: '', imageUrl: '/images/natureza/IMG_0729-natureza-05.jpg', category: 'natureza', width: 683, height: 1024 },
       { id: 'natureza-6', title: '', imageUrl: '/images/natureza/IMG_0708-natureza-07.jpg', category: 'natureza', width: 1024, height: 683 },
       { id: 'natureza-7', title: '', imageUrl: '/images/natureza/IMG_0563-natureza-06.jpg', category: 'natureza', width: 1024, height: 683 },
+      { id: 'natureza-8', title: '', imageUrl: '/images/natureza/IMG_1271-natureza-08.jpg', category: 'natureza', width: 1024, height: 683 },
+      { id: 'natureza-9', title: '', imageUrl: '/images/natureza/DSC_0632-natureza-09.jpg', category: 'natureza', width: 1024, height: 683 },
     ]
   },
   {
@@ -37,18 +39,18 @@ export const categories: Category[] = [
     description: 'Cenários naturais que contam histórias',
     imageUrl: '/images/cogumelo/IMG_6877-cogumelo-12.png',
     photos: [
-      { id: 'cogumelo-1', title: 'Cogumelo 01', imageUrl: '/images/cogumelo/IMG_2282-cogumelo-01.png', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-2', title: 'Cogumelo 02', imageUrl: '/images/cogumelo/IMG_2504-cogumelo-02.jpg', category: 'cogumelo', width: 800, height: 1200 },
-      { id: 'cogumelo-3', title: 'Cogumelo 03', imageUrl: '/images/cogumelo/IMG_3339-cogumelo-03.jpg', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-4', title: 'Cogumelo 04', imageUrl: '/images/cogumelo/IMG_3340-cogumelo-04.jpg', category: 'cogumelo', width: 800, height: 1200 },
-      { id: 'cogumelo-5', title: 'Cogumelo 05', imageUrl: '/images/cogumelo/IMG_3911-cogumelo-05.png', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-6', title: 'Cogumelo 06', imageUrl: '/images/cogumelo/IMG_4187-cogumelo-06.png', category: 'cogumelo', width: 800, height: 1200 },
-      { id: 'cogumelo-7', title: 'Cogumelo 07', imageUrl: '/images/cogumelo/IMG_4208-cogumelo-07.png', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-8', title: 'Cogumelo 08', imageUrl: '/images/cogumelo/IMG_5623-cogumelo-08.png', category: 'cogumelo', width: 800, height: 1200 },
-      { id: 'cogumelo-9', title: 'Cogumelo 09', imageUrl: '/images/cogumelo/IMG_6096-cogumelo-09.jpg', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-10', title: 'Cogumelo 10', imageUrl: '/images/cogumelo/IMG_6097-cogumelo-10.jpg', category: 'cogumelo', width: 800, height: 1200 },
-      { id: 'cogumelo-11', title: 'Cogumelo 11', imageUrl: '/images/cogumelo/IMG_6101-cogumelo-11.jpg', category: 'cogumelo', width: 1200, height: 800 },
-      { id: 'cogumelo-12', title: 'Cogumelo 12', imageUrl: '/images/cogumelo/IMG_6877-cogumelo-12.png', category: 'cogumelo', width: 800, height: 1200 }
+      { id: 'cogumelo-1', title: '', imageUrl: '/images/cogumelo/IMG_2282-cogumelo-01.png', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-2', title: '', imageUrl: '/images/cogumelo/IMG_2504-cogumelo-02.jpg', category: 'cogumelo', width: 800, height: 1200 },
+      { id: 'cogumelo-3', title: '', imageUrl: '/images/cogumelo/IMG_3339-cogumelo-03.jpg', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-4', title: '', imageUrl: '/images/cogumelo/IMG_3340-cogumelo-04.jpg', category: 'cogumelo', width: 800, height: 1200 },
+      { id: 'cogumelo-5', title: '', imageUrl: '/images/cogumelo/IMG_3911-cogumelo-05.png', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-6', title: '', imageUrl: '/images/cogumelo/IMG_4187-cogumelo-06.png', category: 'cogumelo', width: 800, height: 1200 },
+      { id: 'cogumelo-7', title: '', imageUrl: '/images/cogumelo/IMG_4208-cogumelo-07.png', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-8', title: '', imageUrl: '/images/cogumelo/IMG_5623-cogumelo-08.png', category: 'cogumelo', width: 800, height: 1200 },
+      { id: 'cogumelo-9', title: '', imageUrl: '/images/cogumelo/IMG_6096-cogumelo-09.jpg', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-10', title: '', imageUrl: '/images/cogumelo/IMG_6097-cogumelo-10.jpg', category: 'cogumelo', width: 800, height: 1200 },
+      { id: 'cogumelo-11', title: '', imageUrl: '/images/cogumelo/IMG_6101-cogumelo-11.jpg', category: 'cogumelo', width: 1200, height: 800 },
+      { id: 'cogumelo-12', title: '', imageUrl: '/images/cogumelo/IMG_6877-cogumelo-12.png', category: 'cogumelo', width: 800, height: 1200 }
     ]
   },
   {
@@ -57,10 +59,10 @@ export const categories: Category[] = [
     description: 'Cenários naturais que contam histórias',
     imageUrl: '/images/filtros/img131-filtros-01.jpg',
     photos: [
-      { id: 'filtros-1', title: 'Filtros 01', imageUrl: '/images/filtros/img131-filtros-01.jpg', category: 'filtros', width: 1200, height: 800 },
-      { id: 'filtros-2', title: 'Filtros 02', imageUrl: '/images/filtros/img133-filtros-02.jpg', category: 'filtros', width: 800, height: 1200 },
-      { id: 'filtros-3', title: 'Filtros 03', imageUrl: '/images/filtros/img135-filtros-03.jpg', category: 'filtros', width: 1200, height: 800 },
-      { id: 'filtros-4', title: 'Filtros 04', imageUrl: '/images/filtros/img136-filtros-04.jpg', category: 'filtros', width: 800, height: 1200 }
+      { id: 'filtros-1', title: '', imageUrl: '/images/filtros/img131-filtros-01.jpg', category: 'filtros', width: 1200, height: 800 },
+      { id: 'filtros-2', title: '', imageUrl: '/images/filtros/img133-filtros-02.jpg', category: 'filtros', width: 800, height: 1200 },
+      { id: 'filtros-3', title: '', imageUrl: '/images/filtros/img135-filtros-03.jpg', category: 'filtros', width: 1200, height: 800 },
+      { id: 'filtros-4', title: '', imageUrl: '/images/filtros/img136-filtros-04.jpg', category: 'filtros', width: 800, height: 1200 }
     ]
   },
   {
@@ -69,7 +71,17 @@ export const categories: Category[] = [
     description: 'Cenários naturais que contam histórias',
     imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg',
     photos: [
-      { id: 'tofino-1', title: 'Tofino 01', imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-1', title: '', imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg', category: 'tofino', width: 1200, height: 800 },
+    ]
+  },
+  {
+    id: 'urbano',
+    name: 'Urbano',
+    description: 'Cenários naturais que contam histórias',
+    imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg',
+    photos: [
+      { id: 'urbano-1', title: '', imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg', category: 'urbano', width: 1200, height: 800 },
+      { id: 'urbano-1', title: '', imageUrl: '/images/urbano/IMG_6975-urbano-01.jpg', category: 'urbano', width: 1200, height: 800 },
     ]
   },
 ];

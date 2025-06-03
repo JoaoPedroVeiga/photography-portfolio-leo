@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 
 interface Category {
@@ -12,11 +12,16 @@ interface HeaderClientProps {
   photoCategories: Category[];
   videoCategories: Category[];
 }
-
 const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPhotosMenuOpen, setIsPhotosMenuOpen] = useState(false);
+  const photosMenuRef = useRef<HTMLDivElement>(null);
+
+  // Função para fechar o menu de fotos
+  const closePhotosMenu = useCallback(() => {
+    setIsPhotosMenuOpen(false);
+  }, []);
 
   // Verifica o tamanho da tela e atualiza o estado
   useEffect(() => {
@@ -28,6 +33,37 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Adiciona event listener para o scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isPhotosMenuOpen && !isMobile) {
+        closePhotosMenu();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isPhotosMenuOpen, closePhotosMenu, isMobile]);
+
+  // Fecha o menu quando clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (photosMenuRef.current && !photosMenuRef.current.contains(event.target as Node)) {
+        closePhotosMenu();
+      }
+    };
+
+    if (isPhotosMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isPhotosMenuOpen, closePhotosMenu]);
 
   const togglePhotosMenu = () => {
     setIsPhotosMenuOpen(!isPhotosMenuOpen);
@@ -47,12 +83,12 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
           </Link>
           
           {/* Dropdown Fotos e Vídeos */}
-          <div className="relative">
+          <div className="relative" ref={photosMenuRef}>
             <button 
               onClick={togglePhotosMenu}
               className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group flex items-center"
             >
-              Fotos e Vídeos
+              Fotos
               <svg 
                 className={`ml-1 w-4 h-4 transition-transform duration-200 ${isPhotosMenuOpen ? 'rotate-180' : ''}`}
                 fill="none" 
@@ -67,20 +103,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
             {/* Dropdown Menu */}
             {isPhotosMenuOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 z-50 border border-gray-700">
-                <div className="px-4 py-2 text-gray-400 text-sm border-b border-gray-700">Fotos</div>
                 {photoCategories.map((category) => (
-                  <Link
-                    key={category.href}
-                    href={category.href}
-                    className="block px-4 py-2 text-gray-100 hover:bg-gray-800 hover:text-white transition-colors"
-                    onClick={() => setIsPhotosMenuOpen(false)}
-                  >
-                    {category.name}
-                  </Link>
-                ))}
-                
-                <div className="px-4 py-2 text-gray-400 text-sm border-t border-b border-gray-700">Vídeos</div>
-                {videoCategories.map((category) => (
                   <Link
                     key={category.href}
                     href={category.href}
@@ -93,6 +116,14 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
               </div>
             )}
           </div>
+
+          <Link 
+            href="/videos" 
+            className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
+          >
+            Vídeos
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </Link>
           
           <Link 
             href="/contato" 
@@ -184,44 +215,35 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
                   >
                     Sobre
                   </Link>
-                  
-                  {/* Dropdown Fotos e Vídeos Mobile */}
+
+                  {/* Dropdown Fotos Mobile */}
                   <div className="flex flex-col">
                     <button
                       onClick={togglePhotosMenu}
                       className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors flex justify-between items-center"
                     >
-                      <span>Fotos e Vídeos</span>
-                      <svg 
-                        className={`ml-1 w-4 h-4 transition-transform duration-200 ${isPhotosMenuOpen ? 'rotate-180' : ''}`}
-                        fill="none" 
-                        stroke="currentColor" 
+                      <span>Fotos</span>
+                      <svg
+                        className={`ml-1 w-4 h-4 transition-transform duration-200 ${
+                          isPhotosMenuOpen ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
-                    
+
                     {/* Submenu */}
                     {isPhotosMenuOpen && (
                       <div className="ml-4 mt-2 flex flex-col space-y-2">
-                        <div className="text-gray-400 text-sm px-4">Fotos</div>
                         {photoCategories.map((category) => (
-                          <Link
-                            key={category.href}
-                            href={category.href}
-                            className="text-gray-100 hover:text-gray-900 py-2 px-6 rounded hover:bg-gray-100 transition-colors"
-                            onClick={() => {
-                              setIsOpen(false);
-                              setIsPhotosMenuOpen(false);
-                            }}
-                          >
-                            {category.name}
-                          </Link>
-                        ))}
-                        
-                        <div className="text-gray-400 text-sm px-4">Vídeos</div>
-                        {videoCategories.map((category) => (
                           <Link
                             key={category.href}
                             href={category.href}
@@ -237,7 +259,18 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
                       </div>
                     )}
                   </div>
-                  
+
+                  <Link
+                    href="/videos"
+                    className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsPhotosMenuOpen(false);
+                    }}
+                  >
+                    Vídeos
+                  </Link>
+
                   <Link
                     href="/contato"
                     className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors"
