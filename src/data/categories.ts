@@ -14,6 +14,11 @@ export const categories: Category[] = [
       { id: 'preto-3', title: '', imageUrl: '/images/preto/IMG_0640-preto-03.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
       { id: 'preto-4', title: '', imageUrl: '/images/preto/IMG_0640-preto-04.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
       { id: 'preto-5', title: '', imageUrl: '/images/preto/IMG_0663-preto-05.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
+      { id: 'preto-6', title: '', imageUrl: '/images/preto/preto-06.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
+      { id: 'preto-7', title: '', imageUrl: '/images/preto/preto-07.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
+      { id: 'preto-8', title: '', imageUrl: '/images/preto/preto-08.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
+      { id: 'preto-9', title: '', imageUrl: '/images/preto/preto-09.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
+      { id: 'preto-10', title: '', imageUrl: '/images/preto/preto-10.jpg', category: 'preta-e-branca', width: 683, height: 1024 },
     ]
   },
   {
@@ -72,6 +77,11 @@ export const categories: Category[] = [
     imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg',
     photos: [
       { id: 'tofino-1', title: '', imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-2', title: '', imageUrl: '/images/tofino/tofino-02.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-3', title: '', imageUrl: '/images/tofino/tofino-03.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-4', title: '', imageUrl: '/images/tofino/tofino-04.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-5', title: '', imageUrl: '/images/tofino/tofino-05.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'tofino-6', title: '', imageUrl: '/images/tofino/tofino-06.jpg', category: 'tofino', width: 1200, height: 800 },
     ]
   },
   {
@@ -81,7 +91,22 @@ export const categories: Category[] = [
     imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg',
     photos: [
       { id: 'urbano-1', title: '', imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg', category: 'urbano', width: 1200, height: 800 },
-      { id: 'urbano-1', title: '', imageUrl: '/images/urbano/IMG_6975-urbano-01.jpg', category: 'urbano', width: 1200, height: 800 },
+      { id: 'urbano-2', title: '', imageUrl: '/images/urbano/IMG_6975-urbano-01.jpg', category: 'urbano', width: 1200, height: 800 },
+      { id: 'urbano-3', title: '', imageUrl: '/images/urbano/urbano-03.jpg', category: 'urbano', width: 1200, height: 800 },
+      { id: 'urbano-4', title: '', imageUrl: '/images/urbano/urbano-04.jpg', category: 'urbano', width: 1200, height: 800 },
+      { id: 'urbano-5', title: '', imageUrl: '/images/urbano/urbano-05.jpg', category: 'urbano', width: 1200, height: 800 },
+    ]
+  },
+   {
+    id: 'noturna',
+    name: 'Noturna',
+    description: 'Cenários naturais que contam histórias',
+    imageUrl: '/images/noturna/noturna-02.jpg',
+    photos: [
+      { id: 'noturna-1', title: '', imageUrl: '/images/noturna/noturna-01.jpg', category: 'noturna', width: 1200, height: 800 },
+      { id: 'noturna-2', title: '', imageUrl: '/images/noturna/noturna-02.jpg', category: 'noturna', width: 1200, height: 800 },
+      { id: 'noturna-3', title: '', imageUrl: '/images/noturna/noturna-03.jpg', category: 'noturna', width: 1200, height: 800 },
+      { id: 'noturna-4', title: '', imageUrl: '/images/noturna/noturna-04.jpg', category: 'noturna', width: 1200, height: 800 },
     ]
   },
 ];
