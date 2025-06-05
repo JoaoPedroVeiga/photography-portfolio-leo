@@ -124,14 +124,6 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
             Vídeos
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          
-          <Link 
-            href="/contato" 
-            className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
-          >
-            Contato
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </Link>
         </nav>
       )}
 
