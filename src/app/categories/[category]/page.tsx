@@ -1,21 +1,23 @@
-import React from 'react';
+import type { Metadata } from 'next';
 import PhotoGrid from '@/components/PhotoGrid';
 import { categories, getPhotosByCategory } from '@/data/categories';
 
-// Gera os paths estáticos no build time
-export async function generateStaticParams() {
+type ParamsType = {
+  category: string;
+};
+
+export async function generateStaticParams(): Promise<ParamsType[]> {
   return categories.map((category) => ({
     category: category.id,
   }));
 }
 
-export default function CategoryPage({
-  params,
-}: {
-  params: { category: string };
-}) {
+export const metadata: Metadata = {
+  title: 'Category Page',
+};
+
+export default function CategoryPage({ params }: { params: ParamsType }) {
   const categoryId = decodeURIComponent(params.category);
-  
   const currentCategory = categories.find(cat => cat.id === categoryId);
   const photos = getPhotosByCategory(categoryId);
 
@@ -26,6 +28,7 @@ export default function CategoryPage({
       </div>
     );
   }
+
 
   return (
     <div className="min-h-screen bg-black text-white">

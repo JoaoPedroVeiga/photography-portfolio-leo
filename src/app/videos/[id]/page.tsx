@@ -1,8 +1,15 @@
 // app/videos/[id]/page.tsx
 import React from 'react';
-import { getVideoById, videoCategories } from '@/data/videos';
+import { getVideoById, videoCategories, videos } from '@/data/videos';
 import Link from 'next/link';
 import { VideoPlayer } from '@/components/VideoCard/VideoPlayer';
+
+
+export async function generateStaticParams() {
+  return videos.map((video) => ({
+    id: video.id,
+  }));
+}
 
 export default function VideoPage({ params }: { params: { id: string } }) {
   const video = getVideoById(params.id);
