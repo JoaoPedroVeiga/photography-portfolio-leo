@@ -16,7 +16,7 @@ export default function VideoPage({ params }: { params: { id: string } }) {
             href="/videos" 
             className="px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors"
           >
-            Voltar para Vídeos
+            Back to Videos
           </Link>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default function VideoPage({ params }: { params: { id: string } }) {
               href="/videos" 
               className="px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors"
             >
-              Voltar para Vídeos
+              Back to Videos
             </Link>
           </div>
         </div>

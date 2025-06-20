@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 // components/VideoCard/VideoPlayer.tsx
-import React, { useState, useRef, useEffect } from 'react';
-import { Video } from '@/types/types';
+import React, { useState, useRef, useEffect } from "react";
+import { Video } from "@/types/types";
 
 interface VideoPlayerProps {
   video: Video;
@@ -11,33 +11,46 @@ interface VideoPlayerProps {
   className?: string;
 }
 
-export const VideoPlayer: React.FC<VideoPlayerProps> = ({ 
-  video, 
-  autoPlay = false, 
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  video,
+  autoPlay = false,
   controls = true,
-  className = ''
+  className = "",
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVertical, setIsVertical] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMuted, setIsMuted] = useState(autoPlay); // Mudo por padrão se autoPlay
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    
+
     if (!videoElement) return;
 
     const handleLoadedMetadata = () => {
       const { videoWidth, videoHeight } = videoElement;
-      
-      // Determina se o vídeo é vertical (altura > largura)
       setIsVertical(videoHeight > videoWidth);
       setIsLoading(false);
+
+      // Tenta dar play com áudio (pode ser bloqueado pelo navegador)
+      if (autoPlay) {
+        const playPromise = videoElement.play();
+
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            console.log("Autoplay with sound was prevented, trying muted...");
+            videoElement.muted = true;
+            setIsMuted(true);
+            videoElement.play();
+          });
+        }
+      }
     };
 
-    videoElement.addEventListener('loadedmetadata', handleLoadedMetadata);
-    
+    videoElement.addEventListener("loadedmetadata", handleLoadedMetadata);
+
     return () => {
-      videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      videoElement.removeEventListener("loadedmetadata", handleLoadedMetadata);
     };
   }, [video.videoUrl]);
 
@@ -45,24 +58,26 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     <div className={`flex justify-center items-center ${className}`}>
       {isLoading && (
         <div className="bg-gray-800 w-full h-64 flex items-center justify-center">
-          <div className="animate-pulse text-gray-500">Carregando vídeo...</div>
+          <div className="animate-pulse text-gray-500">Loading video...</div>
         </div>
       )}
-      
-      <div className={`${isLoading ? 'hidden' : 'block'} ${
-        isVertical ? 'max-h-screen max-w-md' : 'w-full max-w-4xl'
-      }`}>
+
+      <div
+        className={`${isLoading ? "hidden" : "block"} ${
+          isVertical ? "max-h-screen max-w-md" : "w-full max-w-4xl"
+        }`}
+      >
         <video
           ref={videoRef}
-          className={`w-full ${isVertical ? 'h-screen' : ''}`}
+          className={`w-full ${isVertical ? "h-screen" : ""}`}
           autoPlay={autoPlay}
           controls={controls}
           playsInline
-          muted={autoPlay}
+          muted={isMuted}
           loop={autoPlay}
         >
           <source src={video.videoUrl} type="video/mp4" />
-          Seu navegador não suporta o elemento de vídeo.
+          Your browser does not support the video element.
         </video>
       </div>
     </div>

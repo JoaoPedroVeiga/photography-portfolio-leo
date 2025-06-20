@@ -3,20 +3,19 @@ import { Video } from '@/types/types';
 export const videos: Video[] = [
   {
     id: 'video-1',
-    title: 'Documentário Natureza',
+    title: 'Above 90 - Vibia breakfast',
     videoUrl: 'videos/MODULAR BREAKFAST.mp4',
-    thumbnailUrl: '/images/video-thumbnails/natureza-thumb.jpg',
-    category: 'documentarios',
-    description: 'Documentário sobre a vida selvagem com fotografia em 4K',
+    thumbnailUrl: '/images/fotos-videos/pexels-pixabay-355978.jpg',
+    category: 'above',
+    description: 'Above 90 Lighting hosted a breakfast with Vibia, showcasing some of their latest lighting designs recently launched in the market.',
     duration: '00:37',
     date: '2023-05-15',
-    tags: ['natureza', 'wildlife', 'documentário']
   },
   {
     id: 'video-2',
     title: 'Bastidores - Sessão de Fotos',
     videoUrl: 'https://example.com/videos/sessao-fotos.mp4',
-    thumbnailUrl: '/images/video-thumbnails/sessao-thumb.jpg',
+    thumbnailUrl: '/images/natureza/IMG_0916-natureza-01.jpg',
     category: 'bastidores',
     description: 'Making of da sessão fotográfica na praia',
     duration: '8:45',
@@ -34,7 +33,7 @@ export const getVideoById = (id: string): Video | undefined => {
 };
 
 export const videoCategories = [
+  { id: 'above', name: 'Above 90' },
   { id: 'documentarios', name: 'Documentários' },
-  { id: 'bastidores', name: 'Bastidores' },
-  { id: 'tutoriais', name: 'Tutoriais' }
+  { id: 'bastidores', name: 'Bastidores' }
 ];
