@@ -5,8 +5,8 @@ import { Category, Photo } from '../types/types';
 export const categories: Category[] = [
   {
     id: 'preta-e-branca',
-    name: 'Preta e branca',
-    description: 'Expressões humanas capturadas com sensibilidade',
+    name: 'B&W',
+    description: '',
     imageUrl: '/images/preto/IMG_0562-preto-01.jpg',
     photos: [
       { id: 'preto-1', title: '', imageUrl: '/images/preto/IMG_0608-preto-02.jpg', category: 'preta-e-branca', width: 1024, height: 683 },
@@ -23,8 +23,8 @@ export const categories: Category[] = [
   },
   {
     id: 'natureza',
-    name: 'Natureza',
-    description: 'Cenários naturais que contam histórias',
+    name: 'Nature',
+    description: '',
     imageUrl: '/images/natureza/IMG_0916-natureza-01.jpg',
     photos: [
       { id: 'natureza-1', title: '', imageUrl: '/images/natureza/IMG_0916-natureza-01.jpg', category: 'natureza', width: 737, height: 1024 },
@@ -40,8 +40,8 @@ export const categories: Category[] = [
   },
   {
     id: 'cogumelo',
-    name: 'Cogumelo',
-    description: 'Cenários naturais que contam histórias',
+    name: 'Mushrooms',
+    description: '',
     imageUrl: '/images/cogumelo/IMG_6877-cogumelo-12.png',
     photos: [
       { id: 'cogumelo-1', title: '', imageUrl: '/images/cogumelo/IMG_2282-cogumelo-01.png', category: 'cogumelo', width: 1200, height: 800 },
@@ -60,34 +60,26 @@ export const categories: Category[] = [
   },
   {
     id: 'filtros',
-    name: 'Filtros',
-    description: 'Cenários naturais que contam histórias',
+    name: 'Analog',
+    description: '',
     imageUrl: '/images/filtros/img131-filtros-01.jpg',
     photos: [
       { id: 'filtros-1', title: '', imageUrl: '/images/filtros/img131-filtros-01.jpg', category: 'filtros', width: 1200, height: 800 },
       { id: 'filtros-2', title: '', imageUrl: '/images/filtros/img133-filtros-02.jpg', category: 'filtros', width: 800, height: 1200 },
       { id: 'filtros-3', title: '', imageUrl: '/images/filtros/img135-filtros-03.jpg', category: 'filtros', width: 1200, height: 800 },
-      { id: 'filtros-4', title: '', imageUrl: '/images/filtros/img136-filtros-04.jpg', category: 'filtros', width: 800, height: 1200 }
-    ]
-  },
-  {
-    id: 'tofino',
-    name: 'Tofino',
-    description: 'Cenários naturais que contam histórias',
-    imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg',
-    photos: [
-      { id: 'tofino-1', title: '', imageUrl: '/images/tofino/img110-tofino-junho-2023.jpg', category: 'tofino', width: 1200, height: 800 },
-      { id: 'tofino-2', title: '', imageUrl: '/images/tofino/tofino-02.jpg', category: 'tofino', width: 1200, height: 800 },
-      { id: 'tofino-3', title: '', imageUrl: '/images/tofino/tofino-03.jpg', category: 'tofino', width: 1200, height: 800 },
-      { id: 'tofino-4', title: '', imageUrl: '/images/tofino/tofino-04.jpg', category: 'tofino', width: 1200, height: 800 },
-      { id: 'tofino-5', title: '', imageUrl: '/images/tofino/tofino-05.jpg', category: 'tofino', width: 1200, height: 800 },
-      { id: 'tofino-6', title: '', imageUrl: '/images/tofino/tofino-06.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-4', title: '', imageUrl: '/images/filtros/img136-filtros-04.jpg', category: 'filtros', width: 800, height: 1200 },
+      { id: 'filtros-5', title: '', imageUrl: '/images/filtros/filtros-10.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-6', title: '', imageUrl: '/images/filtros/filtros-05.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-8', title: '', imageUrl: '/images/filtros/filtros-06.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-9', title: '', imageUrl: '/images/filtros/filtros-07.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-9', title: '', imageUrl: '/images/filtros/filtros-08.jpg', category: 'tofino', width: 1200, height: 800 },
+      { id: 'filtros-10', title: '', imageUrl: '/images/filtros/filtros-09.jpg', category: 'tofino', width: 1200, height: 800 },
     ]
   },
   {
     id: 'urbano',
-    name: 'Urbano',
-    description: 'Cenários naturais que contam histórias',
+    name: 'Urban',
+    description: '',
     imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg',
     photos: [
       { id: 'urbano-1', title: '', imageUrl: '/images/urbano/111eaaa-urbano-02.jpeg', category: 'urbano', width: 1200, height: 800 },
@@ -99,8 +91,8 @@ export const categories: Category[] = [
   },
    {
     id: 'noturna',
-    name: 'Noturna',
-    description: 'Cenários naturais que contam histórias',
+    name: 'Night',
+    description: '',
     imageUrl: '/images/noturna/noturna-02.jpg',
     photos: [
       { id: 'noturna-1', title: '', imageUrl: '/images/noturna/noturna-01.jpg', category: 'noturna', width: 1200, height: 800 },

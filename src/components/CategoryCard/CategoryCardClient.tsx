@@ -16,7 +16,7 @@ export const CategoryCardClient = ({ category, featured = false }: CategoryCardC
 
   return (
     <Link href={`/categories/${category.id.replace(/\s+/g, '-').toLowerCase()}`} passHref>
-      <CategoryCard category={category} featured={featured}>
+      <CategoryCard featured={featured}>
         {isLoading && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-xl z-10" />
         )}
@@ -40,7 +40,7 @@ export const CategoryCardClient = ({ category, featured = false }: CategoryCardC
             {category.description}
           </p>
           <button className="mt-3 px-3 py-1 bg-white text-black rounded-full text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150 hover:bg-gray-100 shadow-md">
-            Ver Galeria
+            Gallery
           </button>
         </div>
       </CategoryCard>

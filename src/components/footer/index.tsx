@@ -8,14 +8,14 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         {/* Título centralizado */}
         <h3 className="text-lg md:text-xl font-light text-center mb-4">
-          Leo Veiga On Social Media
+          Leo Veiga
         </h3>
 
         {/* Links sociais */}
         <div className="flex justify-center space-x-5 md:space-x-6">
           {/* LinkedIn */}
           <Link
-            href="https://www.linkedin.com/in/leoveigafotografia"
+            href="https://www.linkedin.com/in/leoveiga/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-transform hover:scale-110 text-gray-300 hover:text-blue-500"

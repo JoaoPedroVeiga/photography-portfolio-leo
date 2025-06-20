@@ -1,7 +1,9 @@
 "use client";
 
+
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+
 
 interface Category {
   name: string;
@@ -12,7 +14,8 @@ interface HeaderClientProps {
   photoCategories: Category[];
   videoCategories: Category[];
 }
-const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) => {
+const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPhotosMenuOpen, setIsPhotosMenuOpen] = useState(false);
@@ -78,7 +81,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
             href="/sobre" 
             className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
           >
-            Sobre
+            About
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
           
@@ -88,7 +91,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
               onClick={togglePhotosMenu}
               className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group flex items-center"
             >
-              Fotos
+              Photos
               <svg 
                 className={`ml-1 w-4 h-4 transition-transform duration-200 ${isPhotosMenuOpen ? 'rotate-180' : ''}`}
                 fill="none" 
@@ -121,7 +124,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
             href="/videos" 
             className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
           >
-            Vídeos
+            Videos
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
@@ -205,7 +208,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
                       setIsPhotosMenuOpen(false);
                     }}
                   >
-                    Sobre
+                    About
                   </Link>
 
                   {/* Dropdown Fotos Mobile */}
@@ -214,7 +217,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
                       onClick={togglePhotosMenu}
                       className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors flex justify-between items-center"
                     >
-                      <span>Fotos</span>
+                      <span>Photos</span>
                       <svg
                         className={`ml-1 w-4 h-4 transition-transform duration-200 ${
                           isPhotosMenuOpen ? "rotate-180" : ""
@@ -260,18 +263,7 @@ const HeaderClient = ({ photoCategories, videoCategories }: HeaderClientProps) =
                       setIsPhotosMenuOpen(false);
                     }}
                   >
-                    Vídeos
-                  </Link>
-
-                  <Link
-                    href="/contato"
-                    className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors"
-                    onClick={() => {
-                      setIsOpen(false);
-                      setIsPhotosMenuOpen(false);
-                    }}
-                  >
-                    Contato
+                    Videos
                   </Link>
                 </nav>
               </div>

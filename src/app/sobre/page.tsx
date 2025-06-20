@@ -1,78 +1,111 @@
 import { Metadata } from "next";
+import { FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
 
 export const metadata: Metadata = {
-  title: 'Sobre o Fotógrafo - Leo Veiga',
-  description: 'Conheça mais sobre o fotógrafo Leo Veiga e seu trabalho',
+  title: "Sobre o Fotógrafo",
+  description: "Conheça mais sobre o fotógrafo e seu trabalho",
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black">
-      <main className="container mx-auto px-12 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center bg-white text-black p-4">Sobre Leo Veiga</h1>
-          
+      <main className="container mx-auto px-6 py-16 md:px-12">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl tracking-wider mb-12 text-left md:text-left border-b border-white pb-4 animate-fade-in text-gray-100 px-6 text-center md:text-left font-boska font-bold">
+            ABOUT
+          </h1>
+
           <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="md:w-1/3">
-              <div className="rounded-full overflow-hidden border-4 border-white w-64 h-64 mx-auto">
-                {/* Substitua pela imagem real do fotógrafo */}
-                <div className="bg-gray-200 w-full h-full flex items-center justify-center">
-                  <span className="text-gray-600">Foto do Fotógrafo</span>
+            <div className="md:w-1/3 space-y-12">
+              <div className="animate-fade-in delay-100">
+                <div className="rounded-lg overflow-hidden e w-80 h-80 mx-auto">
+                  <img
+                    src="/images/preto/preto-09.jpg"
+                    alt="Fotógrafo trabalhando"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
-            
-            <div className="md:w-2/3 space-y-6">
-              <div className="bg-white text-black p-6">
-                <p className="text-lg leading-relaxed">
-                  Olá, eu sou Leo Veiga, um fotógrafo apaixonado por capturar momentos únicos e transformá-los em memórias eternas.
+
+            <div className="md:w-2/3 space-y-8 text-white">
+              <div className="p-6 border-l-2 border-white hover:border-gray-400 transition-all duration-300 animate-fade-in delay-300">
+                <p className="text-lg leading-relaxed font-light tracking-wide">
+                  Olá, eu sou um fotógrafo apaixonado por capturar momentos
+                  únicos e transformá-los em memórias eternas.
                 </p>
               </div>
-              
-              <div className="bg-white text-black p-6">
-                <p className="text-lg leading-relaxed">
-                  Com mais de 10 anos de experiência no mercado, meu trabalho se concentra em retratar a essência de cada pessoa, lugar ou evento com sensibilidade e técnica apurada.
+
+              <div className="p-6 border-l-2 border-white hover:border-gray-400 transition-all duration-300 animate-fade-in delay-400">
+                <p className="text-lg leading-relaxed font-light tracking-wide">
+                  Com mais de 10 anos de experiência no mercado, meu trabalho se
+                  concentra em retratar a essência de cada pessoa, lugar ou
+                  evento com sensibilidade e técnica apurada.
                 </p>
               </div>
-              
-              <div className="bg-white text-black p-6">
-                <p className="text-lg leading-relaxed">
-                  Minha abordagem combina o olhar artístico com a precisão técnica, resultando em imagens que contam histórias e evocam emoções genuínas.
-                </p>
-              </div>
-              
-              <div className="pt-4 bg-white text-black p-6">
-                <h2 className="text-2xl font-semibold mb-4">Minha Filosofia</h2>
-                <p className="text-lg leading-relaxed italic">
-                  Acredito que a fotografia vai além de simples registros - é uma forma de arte que congela o tempo e preserva a beleza efêmera da vida.
+
+              <div className="p-6 border-l-2 border-white hover:border-gray-400 transition-all duration-300 animate-fade-in delay-500">
+                <p className="text-lg leading-relaxed font-light tracking-wide">
+                  Minha abordagem combina o olhar artístico com a precisão
+                  técnica, resultando em imagens que contam histórias e evocam
+                  emoções genuínas.
                 </p>
               </div>
             </div>
           </div>
-          
-          <div className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6 text-center bg-white text-black p-4">Experiência e Formação</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white text-black p-6 border-2 border-gray-300">
-                <h3 className="text-xl font-medium mb-3">Formação</h3>
-                <ul className="space-y-2">
-                  <li>Bacharelado em Fotografia - Escola de Artes Visuais</li>
-                  <li>Curso Avançado de Iluminação - Instituto Internacional de Fotografia</li>
-                  <li>Workshop de Fotografia de Retrato - Masterclass Fotográfica</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white text-black p-6 border-2 border-gray-300">
-                <h3 className="text-xl font-medium mb-3">Experiência</h3>
-                <ul className="space-y-2">
-                  <li>Fotógrafo freelancer - 10+ anos</li>
-                  <li>Fotógrafo oficial do Festival de Arte Contemporânea</li>
-                  <li>Exposições individuais em 3 países</li>
-                  <li>Colaborações com marcas internacionais</li>
-                </ul>
-              </div>
+
+          {/* Foto centralizada no meio da tela */}
+          <div className="w-full flex justify-center my-10 animate-fade-in delay-600">
+            <div className="w-full md:w-96 max-w-2xl">
+              <img
+                src="/images/sobre/Screen Shot 2022-01-05 at 16.35.37.png"
+                alt="Fotógrafo em ação"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
+
+          {/* Área de Contato - Simplificada */}
+          <section className="mt-20 animate-fade-in delay-700">
+            <h2 className="text-3xl tracking-wider mb-8 text-center md:text-left border-b border-white pb-4 text-gray-100 font-boska font-bold">
+              CONTACT
+            </h2>
+
+            <div className="text-white">
+              <div className="p-6 border-l-2 border-white hover:border-gray-400 transition-all duration-300">
+                <h3 className="text-xl font-medium mb-6">Social Media</h3>
+                <div className="flex flex-col space-y-6">
+                  <a 
+                    href="https://www.instagram.com/leoveigamartins/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-4 hover:text-gray-400 transition-colors"
+                  >
+                    <FiInstagram className="text-2xl" />
+                    <span>@leoveigamartins</span>
+                  </a>
+                  
+                  <a 
+                    href="https://www.linkedin.com/in/leoveiga/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-4 hover:text-gray-400 transition-colors"
+                  >
+                    <FiLinkedin className="text-2xl" />
+                    <span>linkedin.com/in/leoveiga/</span>
+                  </a>
+                  
+                  <a 
+                    href="mailto:contatoleoveiga@gmail.com" 
+                    className="flex items-center space-x-4 hover:text-gray-400 transition-colors"
+                  >
+                    <FiMail className="text-2xl" />
+                    <span>contatoleoveiga@gmail.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
