@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
+import Image from "next/image"; // Importe o componente Image
 
 export const metadata: Metadata = {
   title: "Sobre o Fotógrafo",
@@ -18,11 +19,14 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3 space-y-12">
               <div className="animate-fade-in delay-100">
-                <div className="rounded-lg overflow-hidden e w-80 h-80 mx-auto">
-                  <img
+                <div className="rounded-lg overflow-hidden w-80 h-80 mx-auto relative">
+                  <Image
                     src="/images/preto/preto-09.jpg"
                     alt="Fotógrafo trabalhando"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority
                   />
                 </div>
               </div>
@@ -56,11 +60,13 @@ export default function AboutPage() {
 
           {/* Foto centralizada no meio da tela */}
           <div className="w-full flex justify-center my-10 animate-fade-in delay-600">
-            <div className="w-full md:w-96 max-w-2xl">
-              <img
+            <div className="w-full md:w-96 max-w-2xl relative aspect-[4/3]">
+              <Image
                 src="/images/sobre/Screen Shot 2022-01-05 at 16.35.37.png"
                 alt="Fotógrafo em ação"
-                className="w-full h-auto object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
