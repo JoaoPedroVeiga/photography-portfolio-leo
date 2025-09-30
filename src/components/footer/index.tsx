@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -35,6 +35,17 @@ const Footer = () => {
             <Instagram className="w-6 h-6 md:w-8 md:h-8" />
           </Link>
 
+          {/* YouTube */}
+          <Link
+            href="https://www.youtube.com/@LeoLaraPorA%C3%AD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110 text-gray-300 hover:text-red-500"
+            aria-label="YouTube"
+          >
+            <Youtube className="w-6 h-6 md:w-8 md:h-8" />
+          </Link>
+
           {/* Email */}
           <Link
             href="mailto:contato@leoveiga.com"
@@ -46,9 +57,21 @@ const Footer = () => {
         </div>
 
         {/* Direitos autorais */}
+        <p className="text-center text-sm text-gray-400 mt-6">
+          © {new Date().getFullYear()} Leo Veiga Photography. All rights
+          reserved.
+        </p>
         <p className="text-center text-xs text-gray-400 mt-6">
-          © {new Date().getFullYear()} Leo Veiga Fotografia. Todos os direitos
-          reservados.
+          Website developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-pedro-braga-veiga-40b3a0265/"
+            className="text-gray-300 hover:text-white underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            João Pedro Veiga
+          </a>
+          .
         </p>
       </div>
     </footer>
