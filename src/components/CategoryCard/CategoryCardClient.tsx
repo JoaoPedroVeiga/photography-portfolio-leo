@@ -10,7 +10,7 @@ interface CategoryCardClientProps {
   category: Category;
   featured?: boolean;
 }
-
+// No CategoryCardClient
 export const CategoryCardClient = ({ category, featured = false }: CategoryCardClientProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +33,7 @@ export const CategoryCardClient = ({ category, featured = false }: CategoryCardC
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
         <div className="absolute inset-0 flex flex-col items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 pb-6 text-center z-20">
-          <h3 className="text-white font-bold text-lg sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 className="text-white font-medium text-2xl sm:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
             {category.name}
           </h3>
           <p className="text-gray-200 text-xs sm:text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100">
