@@ -40,4 +40,27 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# ========== FOTOS E VÍDEOS ==========
+# Ignorar todos os arquivos de vídeo
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.m4v
+
+# Ignorar todos os arquivos de imagem
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.raw
+*.cr2
+*.nef
+*.arw
 
