@@ -65,4 +65,6 @@ next-env.d.ts
 *.arw
 
 # Pastas específicas
-/public/videos/
+/public/videos/*.mp4
+*.zip
+public/videos/
