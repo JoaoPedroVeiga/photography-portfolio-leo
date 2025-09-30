@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { VideoPlayer } from '@/components/VideoCard/VideoPlayer';
 
 
-
 export async function generateStaticParams() {
   return videos.map((video) => ({
     id: video.id,
