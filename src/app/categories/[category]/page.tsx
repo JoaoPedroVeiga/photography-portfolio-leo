@@ -13,11 +13,7 @@ export async function generateStaticParams(): Promise<ParamsType[]> {
 }
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Photos',
-=======
-  title: 'Category Page',
->>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
 };
 
 export default function CategoryPage({ params }: { params: ParamsType }) {

@@ -33,8 +33,4 @@ export default function HomePage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
