@@ -3,6 +3,7 @@ import { Video } from '@/types/types';
 export const videos: Video[] = [
   {
     id: 'video-1',
+<<<<<<< HEAD
     title: 'Above 90 – Beer & Build with Modular',
     videoUrl: 'videos/MODULAR BREAKFAST.mp4',
     thumbnailUrl: '/images/fotos-videos/pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg',
@@ -41,6 +42,27 @@ export const videos: Video[] = [
     duration: '00:51',
     date: '2025-08-26',
   },
+=======
+    title: 'Above 90 - Vibia breakfast',
+    videoUrl: 'videos/MODULAR BREAKFAST.mp4',
+    thumbnailUrl: '/images/fotos-videos/pexels-pixabay-355978.jpg',
+    category: 'above',
+    description: 'Above 90 Lighting hosted a breakfast with Vibia, showcasing some of their latest lighting designs recently launched in the market.',
+    duration: '00:37',
+    date: '2023-05-15',
+  },
+  {
+    id: 'video-2',
+    title: 'Bastidores - Sessão de Fotos',
+    videoUrl: 'https://example.com/videos/sessao-fotos.mp4',
+    thumbnailUrl: '/images/natureza/IMG_0916-natureza-01.jpg',
+    category: 'bastidores',
+    description: 'Making of da sessão fotográfica na praia',
+    duration: '8:45',
+    date: '2023-06-22',
+    tags: ['bastidores', 'making-of', 'fotografia']
+  }
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
 ];
 
 export const getVideosByCategory = (categoryId: string): Video[] => {
@@ -53,5 +75,10 @@ export const getVideoById = (id: string): Video | undefined => {
 
 export const videoCategories = [
   { id: 'above', name: 'Above 90' },
+<<<<<<< HEAD
   { id: 'Basket', name: 'Basket' },
+=======
+  { id: 'documentarios', name: 'Documentários' },
+  { id: 'bastidores', name: 'Bastidores' }
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
 ];

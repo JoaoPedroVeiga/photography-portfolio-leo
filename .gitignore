@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 # ========== FOTOS E VÍDEOS ==========
 # Ignorar todos os arquivos de vídeo
 *.mp4
@@ -65,6 +66,10 @@ next-env.d.ts
 *.arw
 
 # Pastas específicas
+/public/videos/
 /public/videos/*.mp4
 *.zip
 public/videos/
+=======
+
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf

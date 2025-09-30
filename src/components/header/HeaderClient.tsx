@@ -77,6 +77,17 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
       {/* Menu Desktop (aparece apenas em telas maiores) */}
       {!isMobile && (
         <nav className="ml-auto hidden md:flex space-x-6 items-center">
+<<<<<<< HEAD
+=======
+          <Link 
+            href="/sobre" 
+            className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
+          >
+            About
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
           {/* Dropdown Fotos e Vídeos */}
           <div className="relative" ref={photosMenuRef}>
             <button 
@@ -117,6 +128,7 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
             className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
           >
             Videos
+<<<<<<< HEAD
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
@@ -125,6 +137,8 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
             className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
           >
             About
+=======
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
@@ -200,6 +214,20 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
               {/* Links do Menu */}
               <div className="p-4">
                 <nav className="flex flex-col space-y-4">
+<<<<<<< HEAD
+=======
+                  <Link
+                    href="/sobre"
+                    className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsPhotosMenuOpen(false);
+                    }}
+                  >
+                    About
+                  </Link>
+
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
                   {/* Dropdown Fotos Mobile */}
                   <div className="flex flex-col">
                     <button
@@ -253,6 +281,7 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
                     }}
                   >
                     Videos
+<<<<<<< HEAD
                   </Link>
 
                   <Link
@@ -264,6 +293,8 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
                     }}
                   >
                     About
+=======
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
                   </Link>
                 </nav>
               </div>

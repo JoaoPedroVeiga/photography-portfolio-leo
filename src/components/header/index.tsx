@@ -9,7 +9,11 @@ const Header = () => {
       {/* Logo/Nome do Fotógrafo */}
       <Link
         href="/"
+<<<<<<< HEAD
         className="font-bold font-louis text-4xl text-white md:absolute md:left-1/2 md:transform md:-translate-x-1/2"
+=======
+        className="font-bold font-boska text-4xl text-white md:absolute md:left-1/2 md:transform md:-translate-x-1/2"
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
       >
         Leo Veiga
       </Link>

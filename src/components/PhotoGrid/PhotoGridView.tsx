@@ -1,5 +1,10 @@
 // src/components/PhotoGrid/PhotoGridView.tsx
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
+=======
+// src/components/PhotoGrid/PhotoGridView.tsx
+import React from 'react';
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
 import Image from 'next/image';
 import { Photo } from '@/types/types';
 
@@ -49,7 +54,11 @@ const PhotoGridView: React.FC<PhotoGridViewProps> = ({
 
   return (
     <>
+<<<<<<< HEAD
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-8 mb-10">
+=======
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-8 mb-10"> {/* Added mb-10 for bottom margin */}
+>>>>>>> d0f1fcb03f8ef425dbfdb76a90d8aea856fd51bf
         {photos.map((photo, index) => (
           <div 
             key={photo.id} 
@@ -71,6 +80,8 @@ const PhotoGridView: React.FC<PhotoGridViewProps> = ({
           </div>
         ))}
       </div>
+
+     
 
       {selectedPhoto && (
         <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
