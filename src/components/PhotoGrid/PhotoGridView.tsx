@@ -1,6 +1,5 @@
 // src/components/PhotoGrid/PhotoGridView.tsx
-// src/components/PhotoGrid/PhotoGridView.tsx
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { Photo } from '@/types/types';
 
@@ -19,9 +18,38 @@ const PhotoGridView: React.FC<PhotoGridViewProps> = ({
   onCloseModal,
   onNavigatePhotos,
 }) => {
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Mínimo de distância para considerar um swipe
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      onNavigatePhotos('next');
+    } else if (isRightSwipe) {
+      onNavigatePhotos('prev');
+    }
+  }, [touchStart, touchEnd, onNavigatePhotos]);
+
   return (
     <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-8 mb-10"> {/* Added mb-10 for bottom margin */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-8 mb-10">
         {photos.map((photo, index) => (
           <div 
             key={photo.id} 
@@ -44,12 +72,15 @@ const PhotoGridView: React.FC<PhotoGridViewProps> = ({
         ))}
       </div>
 
-     
-
       {selectedPhoto && (
         <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-4">
           <div className="relative max-w-6xl w-full">
-            <div className="relative max-h-screen">
+            <div 
+              className="relative max-h-screen"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <button
                 onClick={onCloseModal}
                 className="absolute right-2 top-2 bg-transparent md:bg-gray-900/70 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:md:bg-gray-800/90 transition-all z-50"

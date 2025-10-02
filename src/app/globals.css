@@ -12,6 +12,30 @@ body {
 }
 
 @font-face {
+  font-family: 'Louis-George-Cafe';
+  src: url('/fonts/Louis-George-Cafe-Bold-Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louis-George-Cafe';
+  src: url('/fonts/Louis-George-Cafe-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louis-George-Cafe';
+  src: url('/fonts/Louis-George-Cafe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Boska';
   src: url('/fonts/Boska-Variable.ttf') format('truetype');
   font-weight: 100 900;

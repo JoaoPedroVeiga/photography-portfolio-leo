@@ -13,7 +13,7 @@ export async function generateStaticParams(): Promise<ParamsType[]> {
 }
 
 export const metadata: Metadata = {
-  title: 'Category Page',
+  title: 'Photos',
 };
 
 export default function CategoryPage({ params }: { params: ParamsType }) {
@@ -33,7 +33,7 @@ export default function CategoryPage({ params }: { params: ParamsType }) {
   return (
     <div className="min-h-screen bg-black text-white">
       <main className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl text-center md:pl-8 md:text-left text-4xl font-bold font-boska mb-12">{currentCategory.name}</h1>
+        <h1 className="text-3xl text-center md:pl-8 md:text-left text-4xl font-bold font-louis mb-12">{currentCategory.name}</h1>
         <PhotoGrid photos={photos} />
       </main>
     </div>

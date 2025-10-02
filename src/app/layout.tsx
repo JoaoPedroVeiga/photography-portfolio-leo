@@ -19,7 +19,7 @@ export default function RootLayout({
         {/* Windows Phone (opcional, pois está em desuso) */}
         <meta name="msapplication-navbutton-color" content="#000000" />
       </head>
-      <body className={"antialiased font-arvo"}>
+      <body className={"antialiased font-louis"}>
         <Header />
         {children}
         <Footer />
