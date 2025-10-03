@@ -1,77 +1,66 @@
 import React from "react";
-import Link from "next/link";
-import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
+import { FiInstagram, FiLinkedin, FiMail, FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-100 py-6 px-4">
+    <footer className="bg-black text-gray-200 py-6 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Título centralizado */}
         <h3 className="text-lg md:text-xl font-light text-center mb-4">
           Leo Veiga
         </h3>
 
-        {/* Links sociais */}
         <div className="flex justify-center space-x-5 md:space-x-6">
-          {/* LinkedIn */}
-          <Link
-            href="https://www.linkedin.com/in/leoveiga/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:scale-110 text-gray-300 hover:text-blue-500"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6 md:w-8 md:h-8" />
-          </Link>
-
           {/* Instagram */}
-          <Link
+          <a
             href="https://www.instagram.com/leoveigamartins/"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform hover:scale-110 text-gray-300 hover:text-pink-500"
-            aria-label="Instagram"
+            className="flex items-center space-x-4 transition-colors hover:text-pink-500"
           >
-            <Instagram className="w-6 h-6 md:w-8 md:h-8" />
-          </Link>
+            <FiInstagram className="text-3xl md:text-3xl" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/leoveiga/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-4 transition-colors hover:text-blue-600"
+          >
+            <FiLinkedin className="text-2xl md:text-3xl" />
+          </a>
 
           {/* YouTube */}
-          <Link
-            href="https://www.youtube.com/@LeoLaraPorA%C3%AD"
+          <a
+            href="https://www.youtube.com/@leolaraporai"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform hover:scale-110 text-gray-300 hover:text-red-500"
-            aria-label="YouTube"
+            className="flex items-center space-x-4 transition-colors hover:text-red-600"
           >
-            <Youtube className="w-6 h-6 md:w-8 md:h-8" />
-          </Link>
+            <FiYoutube className="text-3xl md:text-3xl" />
+          </a>
 
           {/* Email */}
-          <Link
-            href="mailto:contato@leoveiga.com"
-            className="transition-transform hover:scale-110 text-gray-300 hover:text-red-500"
-            aria-label="Email"
+          <a
+            href="mailto:contatoleoveiga@gmail.com"
+            className="flex items-center space-x-4 transition-colors hover:text-red-600"
           >
-            <Mail className="w-6 h-6 md:w-8 md:h-8" />
-          </Link>
+            <FiMail className="text-3xl md:text-3xl" />
+          </a>
         </div>
 
-        {/* Direitos autorais */}
         <p className="text-center text-sm text-gray-400 mt-6">
-          © {new Date().getFullYear()} Leo Veiga Photography. All rights
-          reserved.
+          © 2025 Leo Veiga Photography. All rights reserved.
         </p>
+
         <p className="text-center text-xs text-gray-400 mt-6">
-          Website developed by{" "}
-          <a
+          Website developed by <a
             href="https://www.linkedin.com/in/jo%C3%A3o-pedro-braga-veiga-40b3a0265/"
-            className="text-gray-300 hover:text-white underline"
+            className="text-gray-300 hover:text-white underline transition-colors"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            João Pedro Veiga
+          >João Pedro Veiga.
           </a>
-          .
         </p>
       </div>
     </footer>

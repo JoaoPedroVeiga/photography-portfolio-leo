@@ -45,7 +45,7 @@ export default function VideoPage({ params }: { params: { id: string } }) {
           
           {/* Restante do seu código permanece o mesmo */}
           <div className="mb-8">
-            <h1 className="text-2xl md:text-3xl font-bold font-boska mb-2">{video.title}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold font-louis mb-2">{video.title}</h1>
             
             <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm mb-4">
               {video.category && (

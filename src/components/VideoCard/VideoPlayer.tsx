@@ -23,6 +23,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [isMuted, setIsMuted] = useState(autoPlay); // Mudo por padrão se autoPlay
 
   useEffect(() => {
+    setIsLoading(true);
+
     const videoElement = videoRef.current;
 
     if (!videoElement) return;

@@ -9,13 +9,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        arvo: ["Arvo", "sans-serif"],
-        boska: ["Boska", "sans-serif"],
-        tanker: ["Tanker", "sans-serif"],
-        telma: ["Telma", "sans-serif"],
-        louis: ["Louis-George-Cafe", "sans-serif"],
+        arvo: ['Arvo', 'sans-serif'],
+         boska: ['Boska', 'sans-serif'],
+        tanker: ['Tanker', 'sans-serif'],
+        telma: ['Telma', 'sans-serif'],
+        louis: ['Louis-George-Cafe', 'sans-serif'], 
       },
     },
   },
   plugins: [],
-};
+}
