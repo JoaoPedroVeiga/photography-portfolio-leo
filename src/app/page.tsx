@@ -4,7 +4,19 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'Leonardo Veiga',
-  description: "Content Creator.",
+  description: 'Content Creator',
+  openGraph: {
+    title: 'Leonardo Veiga',
+    description: 'Content Creator',
+    images: [
+      {
+        url: '/images/[5] Kodak 200-essa.jpg', // Imagem para compartilhamento
+        width: 1200,
+        height: 630,
+        alt: 'Leonardo Veiga',
+      },
+    ],
+  },
 };
 
 export default function HomePage() {

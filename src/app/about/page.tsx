@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="relative h-96 w-full">
                 <Image
                   alt="Fotógrafo em ação"
-                  src="/images/sobre/Screen Shot 2022-01-05 at 16.35.37.png"
+                  src="/images/sobre/[5] Kodak 200-essa.jpg"
                   fill
                   className="object-scale-down rounded-lg"
                   priority

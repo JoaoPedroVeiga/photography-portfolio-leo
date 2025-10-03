@@ -121,7 +121,7 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
 
           {/* About - TERCEIRO */}
           <Link 
-            href="/sobre" 
+            href="/about" 
             className="text-gray-100 hover:text-white transition-colors duration-300 ease-in-out relative group"
           >
             About
@@ -258,7 +258,7 @@ const HeaderClient = ({ photoCategories }: HeaderClientProps) => {
 
                   {/* About - TERCEIRO */}
                   <Link
-                    href="/sobre"
+                    href="/about"
                     className="text-gray-100 hover:text-gray-900 py-3 px-4 rounded hover:bg-gray-100 transition-colors"
                     onClick={() => {
                       setIsOpen(false);
